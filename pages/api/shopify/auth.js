@@ -6,7 +6,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "SHOPIFY_CLIENT_ID missing" });
   }
 
-  const redirect_uri = "https://<TU-DOMINIO>.vercel.app/api/shopify/callback";
+  const redirect_uri = "https://voidline-api-self.vercel.app/api/shopify/callback";
   const scopes = "write_products,read_products,write_themes,read_themes,write_content,read_content";
 
   const installUrl = `https://${shop}/admin/oauth/authorize?client_id=${client_id}&scope=${scopes}&redirect_uri=${redirect_uri}`;
